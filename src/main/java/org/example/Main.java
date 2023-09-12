@@ -2,6 +2,8 @@ package org.example;
 
 import org.example.cars.Car;
 import org.example.cars.ElectricCar;
+import org.example.library.Book;
+import org.example.library.EBook;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,5 +24,18 @@ public class Main {
         myNewCar.charge();
         myNewCar.accelerate();
         System.out.println("Check the speed again: " + myNewCar.getSpeed() + "km/h");
+
+        System.out.println("--------------------");
+
+        Book myBook = new Book();
+        System.out.println(myBook.returnItem());
+        System.out.println(myBook.checkout());
+
+        System.out.println("--------------------");
+
+        EBook myEBook = new EBook();
+        System.out.println(myEBook.returnItem());
+        System.out.println(myEBook.checkout());
+        System.out.println(myEBook.download());
     }
 }
